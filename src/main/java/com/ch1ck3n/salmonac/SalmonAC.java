@@ -1,7 +1,6 @@
 package com.ch1ck3n.salmonac;
 
 import com.ch1ck3n.salmonac.checks.Check;
-import com.ch1ck3n.salmonac.checks.Debugger;
 import com.ch1ck3n.salmonac.checks.combat.*;
 import com.ch1ck3n.salmonac.checks.movement.*;
 import com.ch1ck3n.salmonac.checks.player.GroundSpoof;
@@ -78,8 +77,6 @@ public final class SalmonAC extends JavaPlugin implements Listener {
         PlayerUtil.weaponDamageListSetup();
 
         /* ----- Check Setup ----- */
-        checkManager.addCheck( new Debugger("Debugger", Check.Response.NONE, Check.Punishment.NONE,"This is a debugger") );
-
         //Combat
         checkManager.addCheck(new Aim("Aim", Check.Response.NONE, Check.Punishment.KICK, "Invalid rotations"));
         checkManager.addCheck( new Blocking("Blocking", Check.Response.NONE, Check.Punishment.KICK, "Attack while blocking") );
